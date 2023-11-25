@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Reporte de Clases</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Sistema de Reporte de Clases De Universidad</h1>
+    </header>
+
+    <section id="reportes">
+        <h2>Reportes de Clases</h2>
+        <form id="formulario-reporte">
+            <label for="facultad">Facultad:</label>
+            <select id="facultad" name="facultad" onchange="cargarDocentes(); cargarClases();">
+                <!-- Opciones de facultades aquí -->
+                <option value="Ciencias">Ciencias</option>
+                <option value="Humanidades">Humanidades</option>
+                <option value="Ingeniería">Ingeniería</option>
+            </select>
+
+            <label for="docente">Docente:</label>
+            <select id="docente" name="docente">
+                <!-- Opciones de docentes aquí -->
+                <option value="Juan Pérez">Juan Pérez</option>
+                <option value="María García">María García</option>
+                <option value="Carlos Rodríguez">Carlos Rodríguez</option>
+            </select>
+
+            <label for="clase">Clase:</label>
+            <select id="clase" name="clase">
+                <!-- Opciones de clases aquí -->
+                <option value="Matemáticas">Matemáticas</option>
+                <option value="Historia">Historia</option>
+                <option value="Informática">Informática</option>
+            </select>
+
+            <label for="reporte">Reporte:</label>
+            <textarea id="reporte" name="reporte"></textarea>
+
+            <button type="button" onclick="agregarReporte()">Agregar Reporte</button>
+        </form>
+
+        <h2>Lista de Reportes</h2>
+        <ul id="lista-reportes">
+            <!-- Aquí se mostrarán los reportes -->
+        </ul>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
